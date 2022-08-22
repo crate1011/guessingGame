@@ -15,6 +15,14 @@ void tryAgain()
     guessCounter++;
     guessesLeft--;
     Console.WriteLine("You Shall Not Pass!!!");
+    if (numberGuess > secretNumber)
+    {
+        Console.WriteLine("You Guessed Too High");
+    }
+    else
+    {
+        Console.WriteLine("You Guessed Too Low");
+    }
     Console.Write($"What's your guess? You're on guess number({guessCounter}) ({guessesLeft}) remaining");
     input = Console.ReadLine();
     numberGuess = int.Parse(input);
