@@ -9,10 +9,13 @@ int numberGuess = int.Parse(input);
 
 int secretNumber = 42;
 
+int guessCounter = 1;
+
 void tryAgain()
 {
+    guessCounter++;
     Console.WriteLine("You Shall Not Pass!!!");
-    Console.Write("What's your guess? ");
+    Console.Write($"{guessCounter} What's your guess? ");
     input = Console.ReadLine();
     numberGuess = int.Parse(input);
 }
