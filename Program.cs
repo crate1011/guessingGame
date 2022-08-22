@@ -16,20 +16,39 @@ void HardDifficulty()
 
     void tryAgain()
     {
-        guessCounter++;
-        guessesLeft--;
-        Console.WriteLine("You Shall Not Pass!!!");
-        if (numberGuess > secretNumber)
+        while (guessesLeft > 1)
         {
-            Console.WriteLine("You Guessed Too High");
+            guessCounter++;
+            guessesLeft--;
+            Console.WriteLine("You Shall Not Pass!!!");
+            if (numberGuess > secretNumber)
+            {
+                Console.WriteLine("You Guessed Too High");
+            }
+            else
+            {
+                Console.WriteLine("You Guessed Too Low");
+            }
+            Console.Write($"What's your guess? You're on guess number({guessCounter}) ({guessesLeft}) remaining");
+            input = Console.ReadLine();
+            numberGuess = int.Parse(input);
+            if (numberGuess == secretNumber)
+            {
+                Console.WriteLine("You Guessed It!!!");
+            }
+            else
+            {
+                if (guessesLeft > 1)
+                {
+                    tryAgain();
+                }
+                else
+                {
+                    Console.WriteLine("You Shall Not Pass!!!");
+                }
+            }
         }
-        else
-        {
-            Console.WriteLine("You Guessed Too Low");
-        }
-        Console.Write($"What's your guess? You're on guess number({guessCounter}) ({guessesLeft}) remaining");
-        input = Console.ReadLine();
-        numberGuess = int.Parse(input);
+
     }
 
     if (numberGuess == secretNumber)
@@ -39,29 +58,9 @@ void HardDifficulty()
     else
     {
         tryAgain();
-        if (numberGuess == secretNumber)
-        {
-            Console.WriteLine("You Guessed It!!!");
-        }
-        else
-        {
-            tryAgain();
-            if (numberGuess == secretNumber)
-            {
-                Console.WriteLine("You Guessed It!!!");
-            }
-            else
-            {
-                tryAgain();
-                if (numberGuess == secretNumber)
-                {
-                    Console.WriteLine("You Guessed It!!!");
-                }
-            }
-        }
-
     }
 }
+
 void MediumDifficulty()
 {
     int guessCounter = 1;
@@ -78,20 +77,39 @@ void MediumDifficulty()
 
     void tryAgain()
     {
-        guessCounter++;
-        guessesLeft--;
-        Console.WriteLine("You Shall Not Pass!!!");
-        if (numberGuess > secretNumber)
+        while (guessesLeft > 1)
         {
-            Console.WriteLine("You Guessed Too High");
+            guessCounter++;
+            guessesLeft--;
+            Console.WriteLine("You Shall Not Pass!!!");
+            if (numberGuess > secretNumber)
+            {
+                Console.WriteLine("You Guessed Too High");
+            }
+            else
+            {
+                Console.WriteLine("You Guessed Too Low");
+            }
+            Console.Write($"What's your guess? You're on guess number({guessCounter}) ({guessesLeft}) remaining");
+            input = Console.ReadLine();
+            numberGuess = int.Parse(input);
+            if (numberGuess == secretNumber)
+            {
+                Console.WriteLine("You Guessed It!!!");
+            }
+            else
+            {
+                if (guessesLeft > 1)
+                {
+                    tryAgain();
+                }
+                else
+                {
+                    Console.WriteLine("You Shall Not Pass!!!");
+                }
+            }
         }
-        else
-        {
-            Console.WriteLine("You Guessed Too Low");
-        }
-        Console.Write($"What's your guess? You're on guess number({guessCounter}) ({guessesLeft}) remaining");
-        input = Console.ReadLine();
-        numberGuess = int.Parse(input);
+
     }
 
     if (numberGuess == secretNumber)
@@ -101,43 +119,6 @@ void MediumDifficulty()
     else
     {
         tryAgain();
-        if (numberGuess == secretNumber)
-        {
-            Console.WriteLine("You Guessed It!!!");
-        }
-        else
-        {
-            tryAgain();
-            if (numberGuess == secretNumber)
-            {
-                Console.WriteLine("You Guessed It!!!");
-            }
-            else
-            {
-                tryAgain();
-                if (numberGuess == secretNumber)
-                {
-                    Console.WriteLine("You Guessed It!!!");
-                }
-                else
-                {
-                    tryAgain();
-                    if (numberGuess == secretNumber)
-                    {
-                        Console.WriteLine("You Guessed It!!!");
-                    }
-                    else
-                    {
-                        tryAgain();
-                        if (numberGuess == secretNumber)
-                        {
-                            Console.WriteLine("You Guessed It!!!");
-                        }
-                    }
-                }
-            }
-        }
-
     }
 }
 void EasyDifficulty()
@@ -156,20 +137,39 @@ void EasyDifficulty()
 
     void tryAgain()
     {
-        guessCounter++;
-        guessesLeft--;
-        Console.WriteLine("You Shall Not Pass!!!");
-        if (numberGuess > secretNumber)
+        while (guessesLeft > 1)
         {
-            Console.WriteLine("You Guessed Too High");
+            guessCounter++;
+            guessesLeft--;
+            Console.WriteLine("You Shall Not Pass!!!");
+            if (numberGuess > secretNumber)
+            {
+                Console.WriteLine("You Guessed Too High");
+            }
+            else
+            {
+                Console.WriteLine("You Guessed Too Low");
+            }
+            Console.Write($"What's your guess? You're on guess number({guessCounter}) ({guessesLeft}) remaining");
+            input = Console.ReadLine();
+            numberGuess = int.Parse(input);
+            if (numberGuess == secretNumber)
+            {
+                Console.WriteLine("You Guessed It!!!");
+            }
+            else
+            {
+                if (guessesLeft > 1)
+                {
+                    tryAgain();
+                }
+                else
+                {
+                    Console.WriteLine("You Shall Not Pass!!!");
+                }
+            }
         }
-        else
-        {
-            Console.WriteLine("You Guessed Too Low");
-        }
-        Console.Write($"What's your guess? You're on guess number({guessCounter}) ({guessesLeft}) remaining");
-        input = Console.ReadLine();
-        numberGuess = int.Parse(input);
+
     }
 
     if (numberGuess == secretNumber)
@@ -179,59 +179,6 @@ void EasyDifficulty()
     else
     {
         tryAgain();
-        if (numberGuess == secretNumber)
-        {
-            Console.WriteLine("You Guessed It!!!");
-        }
-        else
-        {
-            tryAgain();
-            if (numberGuess == secretNumber)
-            {
-                Console.WriteLine("You Guessed It!!!");
-            }
-            else
-            {
-                tryAgain();
-                if (numberGuess == secretNumber)
-                {
-                    Console.WriteLine("You Guessed It!!!");
-                }
-                else
-                {
-                    tryAgain();
-                    if (numberGuess == secretNumber)
-                    {
-                        Console.WriteLine("You Guessed It!!!");
-                    }
-                    else
-                    {
-                        tryAgain();
-                        if (numberGuess == secretNumber)
-                        {
-                            Console.WriteLine("You Guessed It!!!");
-                        }
-                        else
-                        {
-                            tryAgain();
-                            if (numberGuess == secretNumber)
-                            {
-                                Console.WriteLine("You Guessed It!!!");
-                            }
-                            else
-                            {
-                                tryAgain();
-                                if (numberGuess == secretNumber)
-                                {
-                                    Console.WriteLine("You Guessed It!!!");
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
     }
 }
 
