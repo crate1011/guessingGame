@@ -232,7 +232,7 @@ void CheaterDifficulty()
 
 Console.Write("Choose your difficulty. (H/M/E)");
 
-string difficulty = Console.ReadLine();
+string difficulty = Console.ReadLine().ToUpper();
 
 if (difficulty == "H")
 {
